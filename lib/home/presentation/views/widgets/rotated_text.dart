@@ -1,4 +1,5 @@
 import 'package:code_book/contants.dart';
+import 'package:code_book/home/presentation/views/widgets/book_stack_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 
 class RotatedText extends StatelessWidget {
@@ -8,15 +9,21 @@ class RotatedText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         RotatedBox(
           quarterTurns: 3,
-          child: Text(
-            'New',
-            style: TextStyle(color: kSliverColor),
+          child: GestureDetector(
+            onTap: () {
+
+            
+            },
+            child: Text(
+              'New',
+              style: TextStyle(color: kSliverColor),
+            ),
           ),
         ),
         SizedBox(

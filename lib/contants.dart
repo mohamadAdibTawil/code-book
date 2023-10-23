@@ -22,3 +22,5 @@ const kBookImageHarry = 'assets/images/harry.jpg';
 const kShadowColor = Color(0xFF313131);
 
 const kPopularBox = 'PopularBox';
+const kNewestBox = 'kNewestBox';
+

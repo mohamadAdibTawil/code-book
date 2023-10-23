@@ -20,21 +20,47 @@ class HomeRepoImpl extends HomeRepo {
     try {
       booksList = homeLocalDataSource.fetchPopularBooks(pageNumber: pageNumber);
       if (booksList.isNotEmpty) {
-        log('HomeRepoImpl booksList.isNotEmpty::: ${booksList.isNotEmpty} ${booksList}');
+        log('HomeRepoImpl booksList.isNotEmpty fetchPopularBooks::: ${booksList.isNotEmpty} $booksList');
         return right(booksList);
       }
       booksList =
           await homeRemoteDataSource.fetchPopularBooks(pageNumber: pageNumber);
-      log('HomeRepoImpl booksList ::: $booksList');
+      log('HomeRepoImpl booksList fetchPopularBooks::: $booksList');
       return right(booksList);
     } catch (e) {
       if (e is DioException) {
-        log('HomeRepoImpl DioException ::: $DioException ');
-        log('HomeRepoImpl exception ::: $e ');
+        log('HomeRepoImpl DioException fetchPopularBooks::: $DioException ');
+        log('HomeRepoImpl exception fetchPopularBooks::: $e ');
 
         return left(ServerFailure.fromDioException(e));
       }
       log('HomeRepoImpl ServerFailure Exception ::: $e ');
+      return left(ServerFailure(message: e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<BookEntity>>> fetchNewestBooks(
+      {int pageNumber = 0}) async {
+    List<BookEntity> booksList;
+    try {
+      booksList = homeLocalDataSource.fetchNewestBooks(pageNumber: pageNumber);
+      if (booksList.isNotEmpty) {
+        log('HomeRepoImpl booksList.isNotEmpty fetchNewestBooks::: ${booksList.isNotEmpty} $booksList');
+        return right(booksList);
+      }
+      booksList =
+          await homeRemoteDataSource.fetchNewestBooks(pageNumber: pageNumber);
+      log('HomeRepoImpl booksList fetchNewestBooks::: $booksList');
+      return right(booksList);
+    } catch (e) {
+      if (e is DioException) {
+        log('HomeRepoImpl DioException fetchNewestBooks::: $DioException ');
+        log('HomeRepoImpl exception fetchNewestBooks::: $e ');
+
+        return left(ServerFailure.fromDioException(e));
+      }
+      log('HomeRepoImpl ServerFailure Exception fetchNewestBooks::: $e ');
       return left(ServerFailure(message: e.toString()));
     }
   }

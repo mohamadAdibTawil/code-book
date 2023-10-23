@@ -1,7 +1,6 @@
 import 'package:code_book/home/presentation/views/widgets/book_stack_bloc_consumer.dart';
 import 'package:code_book/home/presentation/views/widgets/categories_line.dart';
 import 'package:code_book/home/presentation/views/widgets/custom_app_bar.dart';
-import 'package:code_book/home/presentation/views/widgets/indicator_dots.dart';
 import 'package:code_book/home/presentation/views/widgets/rotated_text.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/utils/styles.dart';
