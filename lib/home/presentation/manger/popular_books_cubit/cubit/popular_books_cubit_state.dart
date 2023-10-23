@@ -17,7 +17,6 @@ class PopularBooksPaginationFailure extends PopularBooksCubitState {
 
 class PopularBooksFailure extends PopularBooksCubitState {
   final String errMessage;
-  
 
   PopularBooksFailure(this.errMessage);
 }

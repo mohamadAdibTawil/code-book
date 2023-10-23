@@ -1,4 +1,3 @@
-
 import 'package:code_book/contants.dart';
 import 'package:code_book/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -40,5 +39,3 @@ class CustomAppBar extends StatelessWidget {
     );
   }
 }
-
-

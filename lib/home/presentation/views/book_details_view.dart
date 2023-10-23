@@ -7,10 +7,10 @@ import '../../../contants.dart';
 class BoookDetailsView extends StatelessWidget {
   const BoookDetailsView({super.key, required this.book});
 
- final BookEntity book;
+  final BookEntity book;
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: kDarkBlackColor,
       body: BookDetailsBody(book: book),
     );

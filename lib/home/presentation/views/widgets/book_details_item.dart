@@ -7,9 +7,10 @@ import '../../../../contants.dart';
 
 class BookDetailsItem extends StatelessWidget {
   const BookDetailsItem({
-    super.key, required this.book,
+    super.key,
+    required this.book,
   });
- final BookEntity book;
+  final BookEntity book;
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -37,7 +38,9 @@ class BookDetailsItem extends StatelessWidget {
                 bottomRight: Radius.circular(50),
               ),
             ),
-            child:  BookInfoItem(book: book,)),
+            child: BookInfoItem(
+              book: book,
+            )),
         Padding(
           padding: EdgeInsets.only(top: size.height * .48 - 20),
           child: Column(

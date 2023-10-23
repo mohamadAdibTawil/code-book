@@ -53,7 +53,6 @@ class HomeViewBody extends StatelessWidget {
                 ],
               ),
             ),
-          
             const SizedBox(
               height: 15,
             ),

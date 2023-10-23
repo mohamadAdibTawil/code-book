@@ -15,27 +15,26 @@ abstract class AppRouter {
         path: '/',
         builder: (context, state) => const HomeView(),
       ),
-      
       GoRoute(
         path: kBookDetailsView,
         // builder: (context, state) => const BoookDetailsView(),
         builder: (context, state) {
-    final book = state.extra as BookEntity;
-    return BoookDetailsView(book: book);
-  },
+          final book = state.extra as BookEntity;
+          return BoookDetailsView(book: book);
+        },
       ),
     ],
   );
 }
-  // static const kSearchView = '/searchView';
+// static const kSearchView = '/searchView';
 
 // GoRoute(path: kLoading,builder: (context, state) => const LoaderPage(),),
 
-      // GoRoute(
-      //   path: kSearchView,
-      //   builder: (context, state) => const SearchView(),
-      // ),
-      // GoRoute(
-      //   path: kHomeView,
-      //   builder: (context, state) => const HomeView(),
-      // ),
+// GoRoute(
+//   path: kSearchView,
+//   builder: (context, state) => const SearchView(),
+// ),
+// GoRoute(
+//   path: kHomeView,
+//   builder: (context, state) => const HomeView(),
+// ),

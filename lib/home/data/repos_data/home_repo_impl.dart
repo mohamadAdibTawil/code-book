@@ -34,7 +34,7 @@ class HomeRepoImpl extends HomeRepo {
 
         return left(ServerFailure.fromDioException(e));
       }
-       log('HomeRepoImpl ServerFailure Exception ::: $e ');
+      log('HomeRepoImpl ServerFailure Exception ::: $e ');
       return left(ServerFailure(message: e.toString()));
     }
   }

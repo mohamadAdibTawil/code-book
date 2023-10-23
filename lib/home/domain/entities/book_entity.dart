@@ -125,8 +125,10 @@ class BookEntity {
 
   @HiveField(39)
   final bool accessInfoQuoteSharingAllowed;
+ @HiveField(40)
+  final int averageRating;
 
-  BookEntity({
+  BookEntity( {
     required this.kindBook,
     required this.idBook,
     required this.etagBook,
@@ -167,119 +169,7 @@ class BookEntity {
     required this.accessInfoAccessViewStatus,
     required this.accessInfoQuoteSharingAllowed,
     required this.searchInfoTextSnippet,
+    required this.averageRating,
   });
-
 }
 
-  // factory BookEntity.fromJson(Map<String, dynamic> json) {
-  //   final volumeInfo = json['volumeInfo'] ?? {};
-  //   final readingModes = volumeInfo['readingModes'] ?? {};
-  //   final panelizationSummary = volumeInfo['panelizationSummary'] ?? {};
-  //   final imageLinks = volumeInfo['imageLinks'] ?? {};
-  //   final saleInfo = json['saleInfo'] ?? {};
-  //   final accessInfo = json['accessInfo'] ?? {};
-  //   final epub = accessInfo['epub'] ?? {};
-  //   final pdf = accessInfo['pdf'] ?? {};
-  //   final searchInfo = json['searchInfo'] ?? {};
-
-  //   return BookEntity(
-  //     kind: json['kind'] ?? '',
-  //     id: json['id'] ?? '',
-  //     etag: json['etag'] ?? '',
-  //     selfLink: json['selfLink'] ?? '',
-  //     title: volumeInfo['title'] ?? '',
-  //     authors: (volumeInfo['authors'] as List<dynamic>?)
-  //             ?.map((author) => author.toString())
-  //             .toList() ??
-  //         [],
-  //     publisher: volumeInfo['publisher'] ?? '',
-  //     publishedDate: volumeInfo['publishedDate'] ?? '',
-  //     description: volumeInfo['description'] ?? '',
-  //     readingModesText: readingModes['text'] ?? false,
-  //     readingModesImage: readingModes['image'] ?? false,
-  //     pageCount: volumeInfo['pageCount'] ?? 0,
-  //     printType: volumeInfo['printType'] ?? '',
-  //     categories: (volumeInfo['categories'] as List<dynamic>?)
-  //             ?.map((category) => category.toString())
-  //             .toList() ??
-  //         [],
-  //     maturityRating: volumeInfo['maturityRating'] ?? '',
-  //     allowAnonLogging: volumeInfo['allowAnonLogging'] ?? false,
-  //     contentVersion: volumeInfo['contentVersion'] ?? '',
-  //     panelizationContainsEpubBubbles:
-  //         panelizationSummary['containsEpubBubbles'] ?? false,
-  //     panelizationContainsImageBubbles:
-  //         panelizationSummary['containsImageBubbles'] ?? false,
-  //     imageLinksSmallThumbnail: imageLinks['smallThumbnail'] ?? '',
-  //     imageLinksThumbnail: imageLinks['thumbnail'] ?? '',
-  //     language: volumeInfo['language'] ?? '',
-  //     previewLink: volumeInfo['previewLink'] ?? '',
-  //     infoLink: volumeInfo['infoLink'] ?? '',
-  //     canonicalVolumeLink: volumeInfo['canonicalVolumeLink'] ?? '',
-  //     saleInfoCountry: saleInfo['country'] ?? '',
-  //     saleInfoSaleability: saleInfo['saleability'] ?? '',
-  //     saleInfoIsEbook: saleInfo['isEbook'] ?? false,
-  //     accessInfoCountry: accessInfo['country'] ?? '',
-  //     accessInfoViewability: accessInfo['viewability'] ?? '',
-  //     accessInfoEmbeddable: accessInfo['embeddable'] ?? false,
-  //     accessInfoPublicDomain: accessInfo['publicDomain'] ?? false,
-  //     accessInfoTextToSpeechPermission:
-  //         accessInfo['textToSpeechPermission'] ?? '',
-  //     accessInfoEpubIsAvailable: epub['isAvailable'] ?? false,
-  //     accessInfoPdfIsAvailable: pdf['isAvailable'] ?? false,
-  //     accessInfoPdfAcsTokenLink: pdf['acsTokenLink'] ?? '',
-  //     accessInfoWebReaderLink: accessInfo['webReaderLink'] ?? '',
-  //     accessInfoAccessViewStatus: accessInfo['accessViewStatus'] ?? '',
-  //     accessInfoQuoteSharingAllowed: accessInfo['quoteSharingAllowed'] ?? false,
-  //     searchInfoTextSnippet: searchInfo['textSnippet'] ?? '',
-  //   );
-  // }
-// @HiveType(typeId: 0)
-// class BookEntity extends HiveObject {
-//   @HiveField(0)
-//   final String bookId;
-//    @HiveField(1)
-//   final String title;
-//    @HiveField(2)
-//   final double price;
-//    @HiveField(3)
-//   final String author;
-//    @HiveField(4)
-//   final String image;
-//    @HiveField(5)
-//   final String rating;
-//    @HiveField(6)
-//   final String? description;
-//    @HiveField(7)
-//   final int? pageCount;
-//    @HiveField(8)
-//   final List<String>? categories;
-//    @HiveField(9)
-//   final String? language;
-//    @HiveField(10)
-//   final bool? isEbook;
-//    @HiveField(11)
-//   final String? textToSpeechPermission;
-//    @HiveField(12)
-//   final String? webReaderLink;
-//    @HiveField(13)
-//   final bool ?isPdfAvailable;
-//    @HiveField(14)
-//   BookEntity({
-//     required this.bookId,
-//     required this.title,
-//     required this.price,
-//     required this.author,
-//     required this.image,
-//     required this.rating,
-//     this.description,
-//     this.pageCount,
-//     this.categories,
-//     this.language,
-//     this.isEbook,
-//     this.textToSpeechPermission,
-//     this.webReaderLink,
-//     this.isPdfAvailable,
-   
-//   });
-// }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../contants.dart';
 
 class BookRating extends StatelessWidget {
-  final double score;
+  final int score;
   const BookRating({
     Key? key,
     required this.score,

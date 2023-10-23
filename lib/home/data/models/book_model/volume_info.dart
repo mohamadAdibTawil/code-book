@@ -5,7 +5,6 @@ import 'reading_modes.dart';
 
 class VolumeInfo {
   String? title;
-  String? subtitle;
   List<String>? authors;
   String? publisher;
   String? publishedDate;
@@ -15,6 +14,8 @@ class VolumeInfo {
   int? pageCount;
   String? printType;
   List<String>? categories;
+  int? averageRating;
+  int? ratingsCount;
   String? maturityRating;
   bool? allowAnonLogging;
   String? contentVersion;
@@ -27,7 +28,6 @@ class VolumeInfo {
 
   VolumeInfo({
     this.title,
-    this.subtitle,
     this.authors,
     this.publisher,
     this.publishedDate,
@@ -37,6 +37,8 @@ class VolumeInfo {
     this.pageCount,
     this.printType,
     this.categories,
+    this.averageRating,
+    this.ratingsCount,
     this.maturityRating,
     this.allowAnonLogging,
     this.contentVersion,
@@ -50,11 +52,10 @@ class VolumeInfo {
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
         title: json['title'] as String?,
-        subtitle: json['subtitle'] as String?,
-       authors: (json['authors'] as List<dynamic>?)
+        authors: (json['authors'] as List<dynamic>?)
             ?.map((author) => author.toString())
             .toList(),
-        //  json['authors'] as List<String>?,
+        // authors: json['authors'] as List<String>?,
         publisher: json['publisher'] as String?,
         publishedDate: json['publishedDate'] as String?,
         description: json['description'] as String?,
@@ -71,6 +72,8 @@ class VolumeInfo {
             ?.map((category) => category.toString())
             .toList(),
         // categories: json['categories'] as List<String>?,
+        averageRating: json['averageRating'] as int?,
+        ratingsCount: json['ratingsCount'] as int?,
         maturityRating: json['maturityRating'] as String?,
         allowAnonLogging: json['allowAnonLogging'] as bool?,
         contentVersion: json['contentVersion'] as String?,
@@ -89,7 +92,6 @@ class VolumeInfo {
 
   Map<String, dynamic> toJson() => {
         'title': title,
-        'subtitle': subtitle,
         'authors': authors,
         'publisher': publisher,
         'publishedDate': publishedDate,
@@ -100,6 +102,8 @@ class VolumeInfo {
         'pageCount': pageCount,
         'printType': printType,
         'categories': categories,
+        'averageRating': averageRating,
+        'ratingsCount': ratingsCount,
         'maturityRating': maturityRating,
         'allowAnonLogging': allowAnonLogging,
         'contentVersion': contentVersion,

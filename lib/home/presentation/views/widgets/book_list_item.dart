@@ -45,7 +45,7 @@ class BookListItem extends StatelessWidget {
               height: 2,
             ),
             Text(
-             '${ book.authors}' ,
+              '${book.authors}',
               // ?? 'The Auther Name',
               style: const TextStyle(fontSize: 14, color: kSliverColor),
             ),

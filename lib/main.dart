@@ -28,7 +28,8 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) {
           return PopularBooksCubit(
-              FetchPopualrBooksUseCase(getIt.get<HomeRepoImpl>()))..fetchPopualrBooks();
+              FetchPopualrBooksUseCase(getIt.get<HomeRepoImpl>()))
+            ..fetchPopualrBooks();
         })
       ],
       child: MaterialApp.router(

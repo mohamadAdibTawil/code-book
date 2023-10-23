@@ -15,8 +15,7 @@ class BookStackListBlocConsumer extends StatefulWidget {
       _BookStackListBlocConsumerState();
 }
 
-class _BookStackListBlocConsumerState
-    extends State<BookStackListBlocConsumer> {
+class _BookStackListBlocConsumerState extends State<BookStackListBlocConsumer> {
   List<BookEntity> books = [];
   @override
   Widget build(BuildContext context) {
@@ -26,14 +25,14 @@ class _BookStackListBlocConsumerState
           books.addAll(state.books);
         }
 
-         if (state is PopularBooksPaginationFailure) {
+        if (state is PopularBooksPaginationFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
             buildErrorWidget(state.errMessage),
           );
         }
       },
       builder: (context, state) {
-        if (state is PopularBooksSuccess  ||
+        if (state is PopularBooksSuccess ||
             state is PopularBooksPaginationLoading ||
             state is PopularBooksPaginationFailure) {
           return BookStackListView(books: books);

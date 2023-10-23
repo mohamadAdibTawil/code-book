@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 
 import '../../../../contants.dart';
 
- class BookStackListItemLoadingIndicator extends StatefulWidget {
+class BookStackListItemLoadingIndicator extends StatefulWidget {
   const BookStackListItemLoadingIndicator({super.key});
 
   @override
-  State<BookStackListItemLoadingIndicator> createState() => _BookStackListItemLoadingIndicatorState();
+  State<BookStackListItemLoadingIndicator> createState() =>
+      _BookStackListItemLoadingIndicatorState();
 }
 
-class _BookStackListItemLoadingIndicatorState extends State<BookStackListItemLoadingIndicator> {
+class _BookStackListItemLoadingIndicatorState
+    extends State<BookStackListItemLoadingIndicator> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -36,9 +38,7 @@ class _BookStackListItemLoadingIndicatorState extends State<BookStackListItemLoa
             child: SizedBox(
               width: 134,
               height: 195,
-              child: CustomBookImageLoadingIndicator(
-             
-              ),
+              child: CustomBookImageLoadingIndicator(),
             ),
           ),
           Positioned(
@@ -47,8 +47,7 @@ class _BookStackListItemLoadingIndicatorState extends State<BookStackListItemLoa
             child: SizedBox(
               width: 150,
               child: Text(
-               '',
-            
+                '',
                 style: const TextStyle(
                     color: kWhiteColor,
                     fontSize: 20,

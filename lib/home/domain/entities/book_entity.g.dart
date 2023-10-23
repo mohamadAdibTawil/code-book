@@ -57,13 +57,14 @@ class BookEntityAdapter extends TypeAdapter<BookEntity> {
       accessInfoAccessViewStatus: fields[38] as String,
       accessInfoQuoteSharingAllowed: fields[39] as bool,
       searchInfoTextSnippet: fields[9] as String,
+      averageRating: fields[40] as int,
     );
   }
 
   @override
   void write(BinaryWriter writer, BookEntity obj) {
     writer
-      ..writeByte(40)
+      ..writeByte(41)
       ..writeByte(0)
       ..write(obj.kindBook)
       ..writeByte(1)
@@ -143,7 +144,9 @@ class BookEntityAdapter extends TypeAdapter<BookEntity> {
       ..writeByte(38)
       ..write(obj.accessInfoAccessViewStatus)
       ..writeByte(39)
-      ..write(obj.accessInfoQuoteSharingAllowed);
+      ..write(obj.accessInfoQuoteSharingAllowed)
+      ..writeByte(40)
+      ..write(obj.averageRating);
   }
 
   @override

@@ -1,10 +1,11 @@
-import '../../../domain/entities/book_entity.dart';
+import 'package:code_book/home/domain/entities/book_entity.dart';
+
 import 'access_info.dart';
 import 'sale_info.dart';
 import 'search_info.dart';
 import 'volume_info.dart';
 
-class BookMdel extends BookEntity {
+class BookModel extends BookEntity {
   String? kind;
   String? id;
   String? etag;
@@ -14,7 +15,7 @@ class BookMdel extends BookEntity {
   AccessInfo? accessInfo;
   SearchInfo? searchInfo;
 
-  BookMdel({
+  BookModel({
     this.kind,
     this.id,
     this.etag,
@@ -23,7 +24,7 @@ class BookMdel extends BookEntity {
     this.saleInfo,
     this.accessInfo,
     this.searchInfo,
-  }) : super(
+  }):super(
   kindBook: kind ?? '',
   idBook: id ?? '',
   etagBook: etag ?? '',
@@ -64,10 +65,11 @@ class BookMdel extends BookEntity {
   accessInfoAccessViewStatus: accessInfo?.accessViewStatus ?? '',
   accessInfoQuoteSharingAllowed: accessInfo?.quoteSharingAllowed ?? false,
   searchInfoTextSnippet: searchInfo?.textSnippet ?? '',
+  averageRating: volumeInfo?.averageRating??3,
+  
 );
 
-
-  factory BookMdel.fromJson(Map<String, dynamic> json) => BookMdel(
+  factory BookModel.fromJson(Map<String, dynamic> json) => BookModel(
         kind: json['kind'] as String?,
         id: json['id'] as String?,
         etag: json['etag'] as String?,

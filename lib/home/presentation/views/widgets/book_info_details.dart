@@ -97,7 +97,7 @@ class BookInfoItem extends StatelessWidget {
                           ),
                           onPressed: () {},
                         ),
-                        const BookRating(score: 4.9),
+                         BookRating(score: book.averageRating),
                       ],
                     )
                   ],

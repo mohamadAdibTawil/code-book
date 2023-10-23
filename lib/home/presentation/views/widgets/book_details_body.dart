@@ -3,16 +3,17 @@ import 'package:code_book/home/presentation/views/widgets/book_details_item.dart
 import 'package:code_book/home/presentation/views/widgets/suggetion_book.dart';
 import 'package:flutter/material.dart';
 import '../../../../contants.dart';
+
 class BookDetailsBody extends StatelessWidget {
   const BookDetailsBody({super.key, required this.book});
- final BookEntity book;
+  final BookEntity book;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-           BookDetailsItem(book: book),
+          BookDetailsItem(book: book),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Column(

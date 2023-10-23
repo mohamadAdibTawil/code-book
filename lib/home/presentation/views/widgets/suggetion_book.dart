@@ -60,7 +60,7 @@ class SuggetionBook extends StatelessWidget {
                 Row(
                   children: <Widget>[
                     const BookRating(
-                      score: 4.9,
+                      score: 4,
                     ),
                     const SizedBox(width: 10),
                     Expanded(
