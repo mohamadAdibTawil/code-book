@@ -32,7 +32,7 @@ class _BookStackListItemLoadingIndicatorState
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             top: 0,
             left: 20,
             child: SizedBox(
@@ -41,21 +41,21 @@ class _BookStackListItemLoadingIndicatorState
               child: CustomBookImageLoadingIndicator(),
             ),
           ),
-          Positioned(
+          const Positioned(
             bottom: 45,
             left: 30,
             child: SizedBox(
               width: 150,
               child: Text(
                 '',
-                style: const TextStyle(
+                style: TextStyle(
                     color: kWhiteColor,
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             bottom: 25,
             left: 30,
             child: SizedBox(
@@ -63,7 +63,7 @@ class _BookStackListItemLoadingIndicatorState
               child: Text(
                 '',
                 overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
+                style: TextStyle(
                     color: kWhiteColor,
                     fontSize: 14,
                     fontWeight: FontWeight.w500),

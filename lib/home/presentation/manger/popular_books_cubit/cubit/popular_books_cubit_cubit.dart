@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
@@ -10,7 +12,7 @@ import 'package:meta/meta.dart';
 
 part 'popular_books_cubit_state.dart';
 
-class PopularBooksCubit extends Cubit<PopularBooksCubitState> {
+ class PopularBooksCubit extends Cubit<PopularBooksCubitState> {
   PopularBooksCubit(this.fetchPopualrBooksUseCase)
       : super(PopularBooksCubitInitial());
 
